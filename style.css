@@ -1,0 +1,90 @@
+html {
+   margin: 0;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: rgb(233, 227, 227);
+   margin: 0;
+   height: 100vh;
+   width: 100vw;
+
+}
+
+.title {
+   text-align: center;
+   font-family: 'Merienda', cursive;
+   font-size: x-large;
+   color: rgb(54, 54, 54);
+}
+.panel-container {
+   display: flex;
+   justify-content: center;
+   height: 80vh;
+   width: 100vw;
+   margin: auto;
+}
+
+.panel{
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 65px;
+   margin: 10px;
+   width: 80px;
+}
+
+.panel h3 {
+   font-family: 'Dancing Script', cursive;
+   margin: 15px;
+   margin-top: 430px;
+   color: aliceblue;
+   text-shadow: 2px 2px 2px rgb(87, 84, 84);
+   font-size: xx-large;
+   opacity: 0;
+}
+
+.panel.active{
+   width: 730px;
+   
+}
+
+.panel.active h3 {
+   opacity: 1;
+   margin-left: 30px;
+   font-size: 3rem;
+   transition: opacity 0.3 ease-in , 0.4s;
+
+}
+
+@media (max-width: 480px) {
+   .panel-container {
+      width: 70vw;
+   }
+
+   .panel {
+      width: 50px;
+   }
+
+   .panel.active h3 {
+      font-size: 2rem;
+   
+   }
+
+   .panel:nth-of-type(4),
+   .panel:nth-of-type(5) {
+      display: none;
+   }
+
+}
+
+
+@media (max-width: 720px) {
+   .panel.active h3 {
+      font-size: 2rem;
+}
+}
+
+
+
